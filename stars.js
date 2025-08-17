@@ -6,10 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const messages = [
         
 "Cho B cơ hội L nhé ❤️❤️❤️",
+"Cho B cơ hội L nhé ❤️❤️❤️",
+"B hứa không để L buồn, L mệt mỏi hay phải phiền lòng nữa đâu 🥺",
 "B hứa không để L buồn, L mệt mỏi hay phải phiền lòng nữa đâu 🥺",
 "Đồng ý L nha 😍😍😍",
-"Ừ nhé 🥰🥰🥰",
-"B sẽ tiếp tục gõ cửa cho đến khi cánh cửa trái tim L mở ra"
+"Đồng ý L nha 😍😍😍",
+"Ừ nhé 🥰🥰🥰"
     ];
 
     // Tạo gradient màu ngẫu nhiên
@@ -66,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hàm tạo text và cánh hoa
     function createTextAndPetals(x, y) {
         // Xóa tất cả text cũ trước khi tạo text mới
-        document.querySelectorAll(".click-text").forEach((e) => e.remove());
 
         const randomMessage =
             messages[Math.floor(Math.random() * messages.length)];
@@ -93,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (document.body.contains(text)) {
                 document.body.removeChild(text);
             }
-        }, 2000);
+        }, 5000);
     }
 
     // Xử lý sự kiện click
@@ -109,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Tạo text tự động mỗi 3 giây
-    setInterval(createAutoText, 1000);
+    setInterval(createAutoText, 2000);
 
     // Mảng các link ảnh
     let currentImageIndex = 0;
